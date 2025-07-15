@@ -36,7 +36,7 @@ namespace Proyecto2
                 Width = 150,
                 DropDownStyle = ComboBoxStyle.DropDownList
             };
-            cmbFiguras.Items.AddRange(new string[] { "Cubo", "Esfera", "Cilindro", "Cono" });
+            cmbFiguras.Items.AddRange(new string[] { "Cubo", "Esfera", "Cilindro", "Cono", "Dona" });
             cmbFiguras.SelectedIndex = 0;
 
             this.Controls.Add(picCanvas);
@@ -64,7 +64,6 @@ namespace Proyecto2
 
             cam.Dibujar(figuraActual, e.Graphics, picCanvas.Size);
 
-            // 🔷 Mostrar nombre de la figura seleccionada
             using (Font font = new Font("Segoe UI", 14, FontStyle.Bold))
             using (Brush brush = new SolidBrush(Color.White))
             {
@@ -72,7 +71,6 @@ namespace Proyecto2
                 e.Graphics.DrawString(titulo, font, brush, 20, 50);
             }
 
-            // 🔶 Mostrar guía de teclas
             using (Font font = new Font("Segoe UI", 10))
             using (Brush brush = new SolidBrush(Color.LightGray))
             {
